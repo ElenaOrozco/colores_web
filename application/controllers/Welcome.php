@@ -4,9 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 
 	public function __construct() {
-        
+
         parent::__construct();
-        
+		$this->load->model('news_model');
+		$this->load->model('category_model');
     }
 
 	public function index()
@@ -31,7 +32,10 @@ class Welcome extends CI_Controller {
 
 	public function news()
 	{
-		$this->load->view('v_news');
+
+		$data['entries'] = $this->news_model->getEntries();
+		$data['categorias'] = $this->category_model->listar_categorias();
+		$this->load->view('v_news', $data);
 	}
 
 	public function contact()

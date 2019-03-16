@@ -14,22 +14,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    <title>Colores Painting Company</title>
 
 	    <!-- Bootstrap core CSS -->
-	    <link rel="stylesheet" href="<?php echo site_url('css/DataTables/bootstrap.css'); ?>">
-	  
+	    <!-- <link rel="stylesheet" href="<?php echo site_url('css/DataTables/bootstrap.css'); ?>"> -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 		<!-- DataTables -->
     	<link rel="stylesheet" href="<?php echo site_url('css/DataTables/dataTables.bootstrap4.min.css'); ?>">
 	    <!-- Custom styles for this template -->
 	    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat" rel="stylesheet">
-	
+
 	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	    <link href="<?php echo base_url("css/style.css") ?>" rel="stylesheet">
 	  </head>
 
-	  
+
 	<body>
     	<header>
-    		
-    
+
+
 			<nav class="navbar navbar-expand-lg navbar-light bg-dark-blue border-bottom shadow-sm  px-md-4 ">
 				<div class="container pt-1 pb-1">
     				<a class="navbar-brand p-1" href="<?= base_url() ?>">
@@ -50,11 +51,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					      <li class="nav-item">
 					        <a class="nav-link text-uppercase my-link2 px-3 text-dark" href="<?= base_url('sessions/logout') ?>">Salir</a>
 					      </li>
-					      
+
 					    </ul>
-					    
-					    
-					
+
+
+
 					</div>
 				</div>
 			</nav>

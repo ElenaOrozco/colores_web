@@ -1,14 +1,14 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class News extends CI_Controller {
+class News extends MY_Controller {
     public function __construct(){
         parent::__construct();
         $this->load->model('news_model');
-        $this->load->model('category_model');              
+        $this->load->model('category_model');
     }
-   
+
     public function index(){
-        
-        
+
+
         $data['entries'] = $this->news_model->getEntries();
         $this->load->view('news/show_entries', $data);
     }
@@ -17,7 +17,12 @@ class News extends CI_Controller {
         $this->load->view('news/new_entry', $data);
     }
     public function insert_entry(){
-        
+
+        if($_FILES['userfile']['name']){
+            $this->cargar_imagen();
+            $subir['imagen'] = $_FILES['userfile']['name'];
+        }
+
         $entry = array(
                 'permalink'   => permalink($this->input->post('title')),
                 'author'      => $this->session->userdata('nombre'),
@@ -27,22 +32,26 @@ class News extends CI_Controller {
                 'tags'        => $this->input->post('tags'),
                 'idCategoria' => $this->input->post('idCategoria'),
 
-                );  
-        if(isset($_POST['draft']) ){
-            $entry['status'] = 'DRAFT';
-        } else{
-            $entry['status'] = 'PUBLISHED';
-        }
-        if(!empty($_FILES['userfile']['name'])){
-            $this->cargar_imagen();
-            $entry['image'] = $_FILES['userfile']['name'];
-        }           
-        $this->news_model->insert('entries', $entry);
-        redirect(base_url('news'));
+                );
+
+        $tabla= 'entries';
+        $campo = 'title';
+        $result = $this->category_model->agregar_registro($entry, $tabla, $campo);
+
+        $mensaje = $this->mensaje_flash($result['type'], $result['mensaje']);
+        $this->session->set_flashdata('correcto', $mensaje);
+
+
+        redirect('/news', 'refresh');
+    }
+
+    public function editForm($id)
+    {
+
     }
 
     public function cargar_imagen(){
-        if($_FILES['userfile']['size'] > 309000){               
+        if($_FILES['userfile']['size'] > 309000){
             $mensaje = $this->mensaje_flash('error', 'Tamaño de la imagen mayor a 300KB');
             $this->session->set_flashdata('correcto', $mensaje);
             $pagina_anterior=$_SERVER['HTTP_REFERER'];
@@ -51,9 +60,9 @@ class News extends CI_Controller {
 
         $_FILES['userfile']['name'] = str_replace(' ', '', $_FILES["userfile"]["name"]);
         $retorno = $this->do_upload('userfile');
-        
+
         $subir['imagen'] = $_FILES["userfile"]["name"];
-        if(!$retorno) 
+        if(!$retorno)
         $msj  .= 'Error al agregar la imagen <br>';
     }
 
@@ -64,17 +73,23 @@ class News extends CI_Controller {
         $config['max_size'] = '2000';
         $config['max_width'] = '2024';
         $config['max_height'] = '2008';
- 
+
         $this->load->library('upload');
         // Cargamos la nueva configuración
         $this->upload->initialize($config);
         //SI LA IMAGEN FALLA AL SUBIR MOSTRAMOS EL ERROR EN LA VISTA UPLOAD_VIEW
         if (!$this->upload->do_upload('userfile')) {
-            
-             return  array('error' => $this->upload->display_errors(), 'estado' =>FALSE);  
+
+             return  array('error' => $this->upload->display_errors(), 'estado' =>FALSE);
         } else{
             return TRUE;
         }
-        
+
+    }
+
+    public function getEntry($permalink)
+    {
+        $data['entry'] = $this->news_model->getEntry($permalink);
+        $this->load->view('news/view_entry', $data);
     }
 }
