@@ -161,6 +161,7 @@ class MY_model extends CI_Model {
 
 
     public function concepto_repetido($campo, $str, $tabla) {
+        $this->db->where('deleted_at', null);
         $this->db->where($campo, $str);
         $query = $this->db->get($tabla);
         if ($query->num_rows() > 0) {

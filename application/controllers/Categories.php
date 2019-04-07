@@ -19,9 +19,11 @@ class Categories extends MY_Controller {
     public function agregar_categoria()
     {
         //Cargar imagen
-        if($_FILES['userfile']['name']) {
-            $this->do_upload();
-            $subir['imagen'] = $_FILES['userfile']['name'];
+        if($_FILES['userfile']['name']){
+            $url_anterior=$_SERVER['HTTP_REFERER'];
+            $imagen = $this->do_upload($url_anterior);
+            //$this->cargar_imagen();
+            $subir['image'] = $imagen['upload_data']['file_name'];
         }
 
         //Insertar categoria
@@ -49,16 +51,11 @@ class Categories extends MY_Controller {
     }
 
     public function editar_categoria(){
-
-        $msj = '';
         if($_FILES['userfile']['name']){
-
-            $result = $this->do_upload();
-            $file_info = $this->upload->data();
-            $subir['imagen'] = $file_info['file_name'];
-            $tipo = $result['tipo'];
-            $msj  .= $result['mensaje'];
-
+            $url_anterior=$_SERVER['HTTP_REFERER'];
+            $imagen = $this->do_upload($url_anterior);
+            //$this->cargar_imagen();
+            $subir['image'] = $imagen['upload_data']['file_name'];
         }
 
         $subir['nombre'] = $this->input->post('nombre_mod');

@@ -147,6 +147,10 @@
 	<script src="<?= base_url('js/tinymce/tinymce.min.js') ?>" crossorigin="anonymous"></script>
 	<script src="<?= base_url('js/swappingwall.jquery.js') ?>" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="<?php echo site_url(); ?>js/tinymce/jquery.tinymce.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+	<script>
+	    baguetteBox.run('.tz-gallery');
+	</script>
 	<!--
 	<script type="text/javascript">
 		(function() {

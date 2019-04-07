@@ -1,10 +1,10 @@
 
 		<?php $this->load->view('layouts/header') ?>
 		<?php $this->load->view('sections/carousel') ?>
-		<?php $this->load->view('sections/services') ?>
-		<?php $this->load->view('sections/about_us') ?>
+		<?php //$this->load->view('sections/services') ?>
+		<?php //$this->load->view('sections/about_us') ?>
 		
-		<div class="container">
+		<!-- <div class="container">
 			
 
 		</div>
@@ -111,7 +111,7 @@
 			</div>
 			
 			
-		</section>
+		</section> -->
 
 
 	<?php $this->load->view('layouts/footer') ?>

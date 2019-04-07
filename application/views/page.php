@@ -1,0 +1,9 @@
+<?php $this->load->view('layouts/header') ?>
+	<?php $this->load->view('sections/carousel') ?>
+	<?php $this->load->view('sections/services') ?>
+	<?php $this->load->view('sections/about_us') ?>
+	<?php $this->load->view('sections/gallery') ?>
+	<?php $this->load->view('sections/testimonials') ?>
+	<?php $this->load->view('sections/estimate') ?>
+	<?php $this->load->view('sections/card_news') ?>
+<?php $this->load->view('layouts/footer') ?>

@@ -10,7 +10,7 @@
 <div class="container d-flex">
     <div class="row">
         <div class="col-12 col-md-4">
-            <h3>Category</h3>
+            <h3 class="pt-5">Category</h3>
 
             <ul class="nav flex-column">
                 <?php if ($categorias->num_rows()> 0): ?>
@@ -27,17 +27,19 @@
             <?php if ($entries->num_rows()> 0): ?>
                 <?php foreach ($entries->result() as $row): ?>
                     <article class="py-5">
-                        <a href="<?= base_url('news/' .$row->permalink)  ?>"><h3><?= $row->title ?></h3></a>
-                        <?= $row->content ?>
-                        <small class="text-muted">Autor: <?= $row->author?><?= date('d-m-Y') ?></small>
+                        <a href="<?= base_url('news/getEntry/' .$row->permalink)  ?>"><h2 class="text-info"><?= $row->title ?></h2></a>
+                        <p><?=  $row->abstract ?>
+                        	<a href="<?= base_url('news/getEntry/' .$row->permalink)  ?>"><small class="text-muted">View More</small></a>
+                    	</p>
+                        <small class="text-muted">Autor: <?= $row->author?> <?= date('d-m-Y') ?></small>
                     </article>
                     <hr>
                 <?php endforeach; ?>
             <?php endif; ?>
 
-            <div class="d-flex justify-content-center py-5">
+            <!-- <div class="d-flex justify-content-center py-5">
                 <button class="btn btn-outline-info">VIEW MORE</button>
-            </div>
+            </div> -->
 
 
 

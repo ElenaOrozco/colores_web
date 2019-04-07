@@ -1,6 +1,7 @@
 <?php $this->load->view('admin/layouts/header'); ?>
-    <div class="container">
+    <div class="container py-5">
         <div class="row">
+            <h3 class="font-weigth-bolder mt-5 mb-1 text-blue">News</h3>
             <div class="col-md-12 mb-3">
                 <?php $correcto = $this->session->flashdata('correcto') ?>
                 <?php if ($correcto) :?>
@@ -21,6 +22,7 @@
                             <th></th>
                             <th>Title</th>
                             <th>Tags</th>
+                            <th>Image</th>
                             <th>Status</th>
                         </tr>
                     </thead>
@@ -38,6 +40,13 @@
                             </td>
                             <td><?= $entry->title ?></td>
                             <td><?= $entry->tags ?></td>
+                            <td>
+                              <?php if($entry->image): ?>
+                                <img height="50" src="<?= base_url('uploads/') .'/'. $entry->image ?>" />
+                              <?php else: ?>
+                                 <img height="50" src="<?= base_url('uploads/') .'/nodisponible.png' ?>" />
+                              <?php endif; ?>
+                            </td>
                             <td><?= $entry->status ?></td>
 
                         </tr>
@@ -54,5 +63,46 @@
 
     </div>
 
+<script type="text/javascript">
+  
 
+  function entry_remove(id){
+    swal({
+      title: "Deseas Eliminar Entrada?",
+      
+      buttons: true,
+      dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+            console.log(id)
+          $.post( "<?= base_url('news/entryRemove/' )?>"  +id, function( data ) {
+            console.log(data)
+            if(data.type == 'success'){
+              swal({
+                title:"Entrada Eliminada!",
+                text: "Entrada Eliminada con Exito",
+                icon: "success",
+                button: "Cerrar",
+              });
+              location.reload();
+            }else{
+              swal({
+                title: "Error!",
+                text: "No se ha podido eliminar la Entrada!",
+                icon: "danger",
+                button: "Cerrar",
+              });
+            }
+
+            
+          }, "json");
+          
+        } 
+      })
+
+
+  }
+
+</script>
 <?php $this->load->view('admin/layouts/footer') ?>

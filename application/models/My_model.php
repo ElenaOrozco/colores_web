@@ -16,6 +16,7 @@ class My_model extends CI_Model {
         
         $retorno = array();
         $repetido =  $this->concepto_repetido($campo, strtoupper($data[$campo]), $tabla);
+        
         if( !$repetido['ret'] ){
         	$this->db->trans_start();
         	//Ingresar datos 
@@ -161,6 +162,7 @@ class My_model extends CI_Model {
 
 
     public function concepto_repetido($campo, $str, $tabla) {
+        $this->db->where('deleted_at', null);
         $this->db->where($campo, $str);
         $query = $this->db->get($tabla);
         if ($query->num_rows() > 0) {

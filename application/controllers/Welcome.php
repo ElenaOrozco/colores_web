@@ -12,7 +12,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data['entries'] = $this->news_model->lastPost(3);
+		$this->load->view('page', $data);
 	}
 
 	public function services()

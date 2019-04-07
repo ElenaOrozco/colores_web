@@ -21,12 +21,18 @@
 		
 	</div>
 </section>
+<div class="container-testimonials">
+	<div class="testimonials2">
 
-<section class="bg-orange text-white p-5">
-	<h3 class="text-uppercase text-center text-dark pb-2 pt-5">COUNT ON COLORES</h3>
-			<h4 class="text-uppercase text-center text-dark pb-5">FOR INTEGRITY, EXCELLENCE, VALUE AND PERSONAL ATTENTION</h4>
-			
-</section>
+		<div class="container">
+			<section class="text-white p-5">
+				<h3 class="text-uppercase text-center pb-2 pt-5  animated zoomIn sleep-1">COUNT ON COLORES</h3>
+						<h4 class="text-uppercase text-center pb-5  animated zoomIn">FOR INTEGRITY, EXCELLENCE, VALUE AND PERSONAL ATTENTION</h4>
+						
+			</section>
+		</div>
+	</div>
+</div>
 <section class="p-5">
 	<div class="container">
 		<div class="row">

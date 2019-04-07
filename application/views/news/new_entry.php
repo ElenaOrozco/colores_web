@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/layouts/header'); ?>
 
-    <div class="container mt-3 pb-5">
-        <div class="card">
+    <div class="container py-5">
+        <div class="card mt-5 mb-1">
             <div class="card-header">
                 New Entry
             </div>
@@ -33,12 +33,12 @@
                                   Draft
                                 </label>
                             </div>
-                            <div class="form-check">
+                            <!-- <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="published" name="published">
                                 <label class="form-check-label" for="defaultCheck2">
                                   Published
                                 </label>
-                            </div>
+                            </div> -->
 
 
                         </div>
@@ -61,14 +61,19 @@
                                 <input type="file" class="form-control-file" id="userfile" name="userfile">
                             </div>
                         </div>
-                        <div class="row" style="margin-top:100px">
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="descripcion">Content</label>
-                                    <textarea class="form-control myTextarea" name="content" id="content" rows="20"></textarea>
-                                </div>
+                        
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="descripcion">Abstract</label>
+                                <textarea class="form-control myTextarea" name="abstract" id="abstract" rows="3"></textarea>
                             </div>
+                            <div class="form-group">
+                                <label for="descripcion">Content</label>
+                                <textarea class="form-control myTextarea" name="content" id="content" rows="20"></textarea>
+                            </div>
+
                         </div>
+                        
 
                     </div>
 

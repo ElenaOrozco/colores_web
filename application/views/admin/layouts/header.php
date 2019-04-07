@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	<header>
 
 
-			<nav class="navbar navbar-expand-lg navbar-light bg-dark-blue border-bottom shadow-sm  px-md-4 ">
+			<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom shadow-sm  px-md-4 ">
 				<div class="container pt-1 pb-1">
     				<a class="navbar-brand p-1" href="<?= base_url() ?>">
 				    	<img src="<?= base_url("img/logo-web-343x66.jpg")?>"  height="50" alt="">
@@ -42,15 +42,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</button>
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					    <ul class="navbar-nav justify-content-end w-100">
-					      <li class="nav-item">
-					        <a class="nav-link text-uppercase my-link2  px-3 text-dark" href="<?= base_url('news') ?>">News</a>
-					      </li>
-					      <li class="nav-item">
-					        <a class="nav-link text-uppercase my-link2 px-3 text-dark" href="<?= base_url('categories') ?>">Categorias</a>
-					      </li>
-					      <li class="nav-item">
-					        <a class="nav-link text-uppercase my-link2 px-3 text-dark" href="<?= base_url('sessions/logout') ?>">Salir</a>
-					      </li>
+					    	<li class="nav-item">
+						        <a class="nav-link text-uppercase my-link2  px-3 text-dark" href="<?= base_url('projects') ?>">Projects</a>
+						    </li>
+						    <li class="nav-item">
+						        <a class="nav-link text-uppercase my-link2  px-3 text-dark" href="<?= base_url('news') ?>">News</a>
+						    </li>
+						    <li class="nav-item">
+						        <a class="nav-link text-uppercase my-link2 px-3 text-dark" href="<?= base_url('categories') ?>">Categories</a>
+						    </li>
+						    <li class="nav-item">
+						        <a class="nav-link text-uppercase my-link2 px-3 text-dark" href="<?= base_url('sessions/logout') ?>">Logout</a>
+						    </li>
 
 					    </ul>
 

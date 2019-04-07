@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="page-footer font-small text-white">
+<footer class="page-footer font-small text-white fixed-bottom ">
 
 
     <!-- Footer Links -->
@@ -40,6 +40,9 @@
 	  crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="<?= base_url('js/DataTables/jquery-3.3.1.js') ?>"></script>
+	<script type="text/javascript" src="<?= base_url('js/DataTables/popper.min.js') ?>"></script>
+	<script src="<?= base_url('js/DataTables/bootstrap4.min.js') ?>"></script> 
 	<script src="<?= base_url('js/tinymce/tinymce.min.js') ?>" crossorigin="anonymous"></script>
 	<script src="<?= base_url('js/swappingwall.jquery.js') ?>" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="<?= base_url('js/SweetAlert/sweetalert.min.js') ?>"></script>
@@ -51,134 +54,57 @@
 
 
 		$(document).ready(function(){
-
-			// var menu = $('#products').offset().top/3;
-			// var marketing = $('.marcas').offset().top;
-
-			// tinymce.init({
-   //              selector: 'textarea',
-   //              language: 'es',
-   //              plugins: "table code paste",
-   //              menubar: "tools table format view edit pastetext"
-   //          });
-   						 $(".add-campo").on("click",function(e){
-                    var dato = $(this).data("info");
-                    tinyMCE.activeEditor.execCommand('mceInsertContent', false, dato);
-                    return false;
-                });
-
-                tinymce.init({
-                    selector: '.myTextarea',
-                    // language: 'es',
-                    // plugins: "table code paste",
-                    // menubar: "tools table format view edit pastetext"
-					height: 500,
-  menubar: false,
-  plugins: [
-    'advlist autolink lists link image charmap print preview anchor textcolor',
-    'searchreplace visualblocks code fullscreen',
-    'insertdatetime media table paste code help wordcount'
-  ],
-  toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
-                });
-
-				// tinymce.init({
-				// 	selector: '.myTextarea',
-				// 	plugins: 'image code',
-				// 	toolbar: 'undo redo | image code',
-
-				// 	// without images_upload_url set, Upload tab won't show up
-				// 	images_upload_url: 'upload.php',
-
-				// 	// override default upload handler to simulate successful upload
-				// 	images_upload_handler: function (blobInfo, success, failure) {
-				// 		var xhr, formData;
-
-				// 		xhr = new XMLHttpRequest();
-				// 		xhr.withCredentials = false;
-				// 		xhr.open('POST', 'upload.php');
-
-				// 		xhr.onload = function() {
-				// 			var json;
-
-				// 			if (xhr.status != 200) {
-				// 				failure('HTTP Error: ' + xhr.status);
-				// 				return;
-				// 			}
-
-				// 			json = JSON.parse(xhr.responseText);
-
-				// 			if (!json || typeof json.location != 'string') {
-				// 				failure('Invalid JSON: ' + xhr.responseText);
-				// 				return;
-				// 			}
-
-				// 			success(json.location);
-				// 		};
-
-				// 		formData = new FormData();
-				// 		formData.append('file', blobInfo.blob(), blobInfo.filename());
-
-				// 		xhr.send(formData);
-				// 	},
-				// });
-
-//https://programacion.net/articulo/como_subir_imagenes_en_el_editor_tinymce_utilizando_php_1977
-
-			$(window).on('scroll', function(){
-
-				if ( $(window).scrollTop() < 100){
-
-					$("#nav-datos").fadeIn(1000, function() {
-					    $(this).addClass("d-sm-block");
-					    $("header nav").removeClass('fixed-top')
-					});
-				}
-				if ( $(window).scrollTop() > 100){
-
-					$("#nav-datos").fadeIn(1000, function() {
-					    $(this).removeClass("d-sm-block");
-					    $("header nav").addClass('fixed-top')
-					});
-				}
-
-
-
+			
+			tinymce.init({
+			  selector: '.myTextarea',
+			  
+			  menubar: false,
+			  plugins: [
+			    'advlist autolink lists link image charmap print preview anchor textcolor',
+			    'searchreplace visualblocks code fullscreen',
+			    'insertdatetime media table paste code help wordcount'
+			  ],
+			  toolbar: 'undo redo | formatselect | bold italic backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | help',
+			  content_css: [
+			    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+			    '//www.tiny.cloud/css/codepen.min.css'
+			  ]
 			});
 
 
-		    $("#myTable").DataTable({
-		      "language": {
-		                        "url": "<?php echo base_url() . 'assets/dataTables.spanish.lang'; ?>"
-		                    },
-				     "buttons": [
-				    'copy', 'excel', 'pdf'
-				]
-			});
 
-			$("#myTableLg").DataTable({
-				"scrollX": true,
-		      	"language": {
-		                        "url": "<?php echo base_url() . 'assets/dataTables.spanish.lang'; ?>"
-		                    },
+		 //    $("#myTable").DataTable({
+		 //      "language": {
+		 //                        "url": "<?php echo base_url() . 'assets/dataTables.spanish.lang'; ?>"
+		 //                    },
+			// 	     "buttons": [
+			// 	    'copy', 'excel', 'pdf'
+			// 	]
+			// });
 
-				     "buttons": [
-				    'copy', 'excel', 'pdf'
-				]
-			});
+			// $("#myTableLg").DataTable({
+			// 	"scrollX": true,
+		 //      	"language": {
+		 //                        "url": "<?php echo base_url() . 'assets/dataTables.spanish.lang'; ?>"
+		 //                    },
+
+			// 	     "buttons": [
+			// 	    'copy', 'excel', 'pdf'
+			// 	]
+			// });
 
 
-	        $('#example2').DataTable({
-	          "paging": true,
-	          "lengthChange": false,
-	          "searching": false,
-	          "ordering": false,
-	          "info": true,
-	          "autoWidth": false,
-	          "buttons": [
-			        'copy', 'excel', 'pdf'
-			    ]
-			});
+	  //       $('#example2').DataTable({
+	  //         "paging": true,
+	  //         "lengthChange": false,
+	  //         "searching": false,
+	  //         "ordering": false,
+	  //         "info": true,
+	  //         "autoWidth": false,
+	  //         "buttons": [
+			//         'copy', 'excel', 'pdf'
+			//     ]
+			// });
 
 			/*$('#myTable').DataTable();*/
 
@@ -192,6 +118,12 @@
 			$("#input-search").toggle()
 
 		});
+
+		function myFunction() {
+			  var x = document.createElement("INPUT");
+			  x.setAttribute("type", "file");
+			  document.body.appendChild(x);
+			}
 
 
 

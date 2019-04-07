@@ -1,14 +1,14 @@
 <?php $this->load->view('admin/layouts/header') ?>
   <!-- Content Header (Page header) -->
-  <section class="content-header bg-ligth">
+  <!-- <section class="content-header bg-ligth py-5">
     
-    <!-- <ol class="breadcrumb">
+    <ol class="breadcrumb">
       <li class="container active"><a href="<?php echo site_url(); ?>"><i class="fa fa-dashboard"></i> Principal</a></li>
      
-    </ol> -->
-  </section>
+    </ol>
+  </section> -->
   
-  <section class="container mb-5">
+  <section class="container py-5 mb-5">
     <h3 class="font-weigth-bolder mt-5 mb-1 text-blue">Categorias</h3>
 
     <div class="row">
@@ -44,8 +44,8 @@
                 <td><?= $categoria->nombre ?></td>
                 <td><?= $categoria->descripcion ?></td>
                 <td>
-                  <?php if($categoria->imagen): ?>
-                    <img height="50" src="<?= base_url('uploads/') .'/'. $categoria->imagen ?>" />
+                  <?php if($categoria->image): ?>
+                    <img height="50" src="<?= base_url('uploads/') .'/'. $categoria->image ?>" />
                   <?php else: ?>
                      <img height="50" src="<?= base_url('uploads/') .'/nodisponible.png' ?>" />
                   <?php endif; ?>
