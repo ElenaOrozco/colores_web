@@ -16,5 +16,7 @@
 	<?php //$this->load->view('sections/testimonials') ?>
 	<?php //$this->load->view('sections/estimate') ?>
 	<?php //$this->load->view('sections/card_news') ?>
+
+	<h1>Utilizando git</h1>
 	
 <?php $this->load->view('layouts/footer') ?>
