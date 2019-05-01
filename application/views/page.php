@@ -10,7 +10,7 @@
 	<?php $this->load->view('page/news') ?>
 
 	<?php //$this->load->view('sections/carousel') ?>
-	<?php //$this->load->view('sections/services') ?>
+	<?php $this->load->view('sections/services') ?>
 	<?php //$this->load->view('sections/about_us') ?>
 	<?php //$this->load->view('sections/gallery') ?>
 	<?php //$this->load->view('sections/testimonials') ?>
