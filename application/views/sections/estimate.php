@@ -1,3 +1,5 @@
+
+
 <section class="estimate">
 	<div class="container">
 		<div class="row py-5">
@@ -13,7 +15,7 @@
 				    <h5 class="card-title text-center text-uppercase font-weight-bold">Free Estimate</h5>
 
 				    
-				    <form>
+				    <form id="contact-form" name="contact-form" action="<?= base_url('contacto/enviar_mensaje')?>" method="POST">
 				    	<div class="form-group">
 						    <label for="exampleFormControlInput1"><strong>Phone</strong> </label>
 						    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Phone">
@@ -29,7 +31,7 @@
 						</div>
 
 						<div class="d-flex justify-content-center">
-							<a href="#" class="btn btn-outline-primary text-uppercase">Send</a>
+							<a href="#" class="btn btn-outline-primary text-uppercase" onclick="document.getElementById('contact-form').submit();">Send</a>
 						</div>
 					</form>
 				    

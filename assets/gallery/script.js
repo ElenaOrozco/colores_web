@@ -221,10 +221,12 @@
 
             // set top to vertical center
             setTop = (wndH - setWidth * lbH / lbW) / 2;
-
+            // console.log('wndH - setWidth * lbH / lbW' + wndH + ' '+ setWidth + ' '+ lbH + ' '+ lbW);
             $modalDialog.css({
                 width: parseInt(setWidth),
-                top: setTop + windowPadding
+                // top: setTop + windowPadding
+                top: 0
+                
             });
         });
     }

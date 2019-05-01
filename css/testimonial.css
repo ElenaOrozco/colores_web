@@ -1,0 +1,86 @@
+.container-testimonials{
+	
+	background: url(../img/black-color-paint-8614.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+.testimonials2{
+	background: rgba(6, 6, 5, 0.5);
+	
+	
+}
+.border-title{
+	border-top: 5px solid #1cb5a6;
+	width: 150px;
+}
+
+.main{
+	background: rgba(0, 0, 0, 0.61);
+	height: 90vh;
+}
+
+/* Slider Main */
+.slider{
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 600%;
+  animation: cambio 40s infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+  
+}
+
+
+
+
+
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+.slider p{
+  width: 100%;
+}
+
+
+.slider img{
+  width: 100vw;
+  height: 60vh;
+
+}
+
+@keyframes cambio{
+  0% {margin-left: 0;}
+  15% {margin-left: 0;}
+
+  17% {margin-left: -100%;}
+  32% {margin-left: -100%;}
+
+  34% {margin-left: -200%;}
+  49% {margin-left: -200%;}
+
+  51% {margin-left: -300%;}
+  66% {margin-left: -300%;}
+
+  68% {margin-left: -400%;}
+  83% {margin-left: -400%;}
+
+  85% {margin-left: -500%;}
+  100% {margin-left: -500%;}
+
+ 
+}
+
+
+
+/* -----/Slide Main ------*/

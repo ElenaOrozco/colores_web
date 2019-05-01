@@ -1,304 +1,232 @@
-<!-- Footer -->
-<footer class="page-footer font-small text-white">
+<section class="footer4 cid-rmV9zHQMmm" id="footer4-e">
 
-    <!-- Footer Links -->
-    <div class="container-fluid text-center bg-medium-blue text-md-left  pt-4">
-		<div class="container">
-			<!-- Footer links -->
-		    <div class="row text-center text-md-left mt-3 pb-3">
+    
 
-		        <!-- Grid column -->
-		        <div class="col-md-6 mt-3">
-		          <h6 class="text-uppercase mb-4 font-weight-bold">COLORES PAINTING COMPANY</h6>
-		          <p>INTEGRITY, EXCELLENCE, VALUE AND PERSONAL ATTENTION.</p>
+    
 
-		          
-		        </div>
-		        <!-- Grid column -->
-
-		        <hr class="w-100 clearfix d-md-none">
-
-		        
-
-		        <hr class="w-100 clearfix d-md-none">
-
-		        <!-- Grid column -->
-		        <div class="col-md-2 mt-3">
-		          <h6 class="text-uppercase mb-4 font-weight-bold">Menu</h6>
-		          <p>
-		            <a href="<?= base_url('') ?>" class="text-white">Home</a>
-		          </p>
-		          <p>
-		            <a href="<?= base_url('/services') ?>" class="text-white">Services</a>
-		          </p>
-		          <p>
-		            <a href="<?= base_url('/about') ?>" class="text-white">Abous Us</a>
-		          </p>
-		          <p>
-		            <a href="<?= base_url('/projects') ?>" class="text-white">Projects</a>
-		          </p>
-		          <p>
-		            <a href="<?= base_url('/news') ?>" class="text-white">News</a>
-		          </p>
-		          <p>
-		            <a href="<?= base_url('/contact') ?>" class="text-white">Contact</a>
-		          </p>
-		        </div>
-
-		        <!-- Grid column -->
-		        <hr class="w-100 clearfix d-md-none">
-
-		        <!-- Grid column -->
-		        <div class="col-md-4 mt-3">
-		          <h6 class="text-uppercase mb-4 font-weight-bold">Contact US</h6>
-		          <p>
-		            <i class="fas fa-home mr-3"></i>Po Box 743, Daly City CA 94017.</p>
-		          <p>
-		            <i class="fas fa-envelope mr-3"></i> info@colorespaintingcompany.com</p>
-		          <p>
-		            <i class="fas fa-phone mr-3"></i>(415) 235-3155</p>
-		          
-		        </div>
-		        <!-- Grid column -->
-
-		    </div>
-		    <!-- Footer links -->
-		</div>
-		    
-
-    	
-
-	    
-
-    </div>
-    <!-- Footer Links -->
-
-   
-    <div class="container-fluid text-center  bg-dark-blue text-md-left  pt-4">
-
-	    <div class="container">
-	    	<!-- Grid row -->
-		    <div class="row d-flex align-items-center bg-negro">
-
-		        <!-- Grid column -->
-		        <div class="col-md-7 col-lg-8">
-
-		          <!--Copyright-->
-		          <p class="text-center text-md-left">© <?= date('Y' ) ?> Copyright:  COLORES PAINTING COMPANY
-		           
-		          </p>
-
-		        </div>
-		        <!-- Grid column -->
-
-		        <!-- Grid column -->
-		        <div class="col-md-5 col-lg-4 ml-lg-0">
-
-		          <!-- Social buttons -->
-		          <div class="text-center text-md-right">
-		            <ul class="list-unstyled list-inline">
-		              <li class="list-inline-item">
-		                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-		                  <i class="fab fa-facebook-f"></i>
-		                </a>
-		              </li>
-		              <li class="list-inline-item">
-		                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-		                  <i class="fab fa-twitter"></i>
-		                </a>
-		              </li>
-		              <li class="list-inline-item">
-		                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-		                  <i class="fab fa-google-plus-g"></i>
-		                </a>
-		              </li>
-		              <li class="list-inline-item">
-		                <a class="btn-floating btn-sm rgba-white-slight mx-1">
-		                  <i class="fab fa-linkedin-in"></i>
-		                </a>
-		              </li>
-		            </ul>
-		          </div>
-
-		        </div>
-		        <!-- Grid column -->
-
-		    </div>
-		    <!-- Grid row -->
-	    </div>
-	</div>
-
-</footer>
-<!-- Footer -->
-
-		
-
-
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-   
-    <script
-	  src="https://code.jquery.com/jquery-3.3.1.min.js"
-	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	  crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-	<script src="<?= base_url('js/tinymce/tinymce.min.js') ?>" crossorigin="anonymous"></script>
-	<script src="<?= base_url('js/swappingwall.jquery.js') ?>" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="<?php echo site_url(); ?>js/tinymce/jquery.tinymce.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-	<script>
-	    baguetteBox.run('.tz-gallery');
-	</script>
-	<!--
-	<script type="text/javascript">
-		(function() {
-  var $imgs = $('#gallery img');
-  var $buttons = $('#buttons');
-  var tagged = {};
-
-  $imgs.each(function() {
-    var img = this;
-    var tags = $(this).data('tags');
-
-    if (tags) {
-      tags.split(',').forEach(function(tagName) {
-        if (tagged[tagName] == null) {
-          tagged[tagName] = [];
-        }
-        tagged[tagName].push(img);
-      })
-    }
-  })
-
-  $('<button/>', {
-    text: 'Show All',
-    class: 'active',
-    click: function() {
-      $(this)
-        .addClass('active')
-        .siblings()
-        .removeClass('active');
-      $imgs.show();
-    }
-  }).appendTo($buttons);
-
-  $.each(tagged, function(tagName) {
-    var $n = $(tagged[tagName]).length;
-    $('<button/>', {
-      text: tagName + '(' + $n + ')',
-      click: function() {
-        $(this)
-          .addClass('active')
-          .siblings()
-          .removeClass('active');
-        $imgs
-          .hide()
-          .filter(tagged[tagName])
-          .show();
-      }
-    }).appendTo($buttons);
-  });
-}())
-
-
-		
-	</script>-->
-	<script type="text/javascript">
-	(function() {
-  		var $imgs = $('#my-gallery img');
-  		var $buttons = $('#buttons');
-  		var tagged = {};
-
-  		$imgs.each(function() {
-    		var img = this;
-    		var tags = $(this).data('tags');
-
-	    if (tags) {
-		    tags.split(',').forEach(function(tagName) {
-		        if (tagged[tagName] == null) {
-		            tagged[tagName] = [];
-		        }
-		        tagged[tagName].push(img);
-		      })
-	    }
-
-	    $(".img-w").each(function() {
-	    	alert('IMG')
-    $(this).wrap("<div class='img-c'></div>")
-    let imgSrc = $(this).find("img").attr("src");
-     $(this).css('background-image', 'url(' + imgSrc + ')');
-  })
+    <div class="container">
+        <div class="media-container-row content mbr-white">
+            <div class="col-md-3 col-sm-4">
+                
+                <p class="mb-4 foot-title mbr-fonts-style display-7 font-weight-bold">
+                    COLORES PAINTING CO
+                </p>
+                <!-- <p class="mb-3 mbr-fonts-style foot-title display-7">
+                    Colores Company
+                </p> -->
+                <p class="mbr-text mbr-fonts-style mbr-links-column display-7">
+                    <a href="<?= base_url('about') ?>" class="text-white">About Us</a>
+                    <br><a href="<?= base_url('services') ?>" class="text-white">Services</a>
+                    <br><a href="<?= base_url('listProjects') ?>" class="text-white">Projects</a>
+                    <br><a href="<?= base_url('listNews') ?>" class="text-white">News</a>
+                    <br><a href="<?= base_url('contact') ?>" class="text-white">Contact</a>
+                    <br><a href="<?= base_url('admin') ?>" class="text-white">Login</a>
+                </p>
+            </div>
+            <div class="col-md-4 offset-md-1 col-sm-12">
+                <p class="mb-4 foot-title mbr-fonts-style display-7 font-weight-bold">
+                    SUBSCRIBE
+                </p>
+                <p class="mbr-text mbr-fonts-style form-text display-7">
+                    Get monthly updates and free resources.
+                </p>
+                <div class="media-container-column" data-form-type="formoid">
+                    <!---Formbuilder Form -->
+                    <form action="https://mobirise.com/" method="POST" class="mbr-form form-with-styler" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="xustui2b71bbAhxaYLAX8DP7yo4eJH1lnUAqkykYs6ZdO9JHssadpTPuliF38/W18Vq5uYQOKGxj2+vNOD0dJ1ywd/Lx8JS9GZOIVLByoLFziRgm2hZnFhQVjCm4+wJJ">
+                        <div class="row form-inline justify-content-center">
+                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                                                    </div>
+                        </div>
+                        <div class="dragArea row form-inline justify-content-center">
+                            <div class="col-auto  form-group " data-for="email">
+                                <input type="email" name="email" placeholder="Email" data-form-field="Email" required="required" class="form-control input-sm input-inverse my-2 display-7" id="email-footer4-e">
+                            </div>
+                            <div class="col-auto  input-group-btn  m-2">
+                                <button type="submit" class="btn btn-primary m-0 display-4">Subscribe</button>
+                            </div>
+                        </div>
+                    </form><!---Formbuilder Form-->
+                </div>
+                
+                
+            </div>
+            <div class="col-md-4 col-sm-8">
+                <p class="mb-4 mbr-fonts-style foot-title display-7 font-weight-bold">
+                    CONNECT WITH US
+                </p>
+                
+                <p class="display-7"><i class="fas fa-home mr-3"></i>Po Box 743, Daly City CA 94017.</p>
+                <p class="display-7"><i class="fas fa-envelope mr-3"></i> info@colorespaintingcompany.com</p>
+                <p class="display-7"><i class="fas fa-phone mr-3"></i>(415) 235-3155</p>
+                <div class="social-list pl-0 mb-0">
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                                <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                                <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://instagram.com/mobirise" target="_blank">
+                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://plus.google.com/u/0/+Mobirise" target="_blank">
+                                <span class="socicon-googleplus socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.behance.net/Mobirise" target="_blank">
+                                <span class="socicon-behance socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                </div>
+            </div>
             
-  
-  $(".img-c").click(function() {
-    let w = $(this).outerWidth()
-    let h = $(this).outerHeight()
-    let x = $(this).offset().left
-    let y = $(this).offset().top
-    
-    
-    $(".active").not($(this)).remove()
-    let copy = $(this).clone();
-    copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
-    $(".active").css('top', y - 8);
-    $(".active").css('left', x - 8);
-    
-      setTimeout(function() {
-    copy.addClass("positioned")
-  }, 0)
-    
-  }) 
-  
-  
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-12 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7 text-center">
+                        © Copyright <?= date('Y') ?> Colores Company- All Rights Reserved
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+  <script src="<?= base_url('assets/web/assets/jquery/jquery.min.js') ?>"></script>
+  <script src="<?= base_url('assets/popper/popper.min.js') ?>"></script>
+  <script src="<?= base_url('assets/tether/tether.min.js') ?>"></script>
+  <script src="<?= base_url('assets/bootstrap/js/bootstrap.min.js') ?>"></script>
+  <script src="<?= base_url('assets/smoothscroll/smooth-scroll.js') ?>"></script>
+  <script src="<?= base_url('assets/ytplayer/jquery.mb.ytplayer.min.js') ?>"></script>
+  <script src="<?= base_url('assets/vimeoplayer/jquery.mb.vimeo_player.js') ?>"></script>
+  <script src="<?= base_url('assets/masonry/masonry.pkgd.min.js') ?>"></script>
+  <script src="<?= base_url('assets/imagesloaded/imagesloaded.pkgd.min.js') ?>"></script>
+  <script src="<?= base_url('assets/bootstrapcarouselswipe/bootstrap-carousel-swipe.js') ?>"></script>
+  <script src="<?= base_url('assets/parallax/jarallax.min.js') ?>"></script>
+  <script src="<?= base_url('assets/viewportchecker/jquery.viewportchecker.js') ?>"></script>
+  <script src="<?= base_url('assets/mbr-clients-slider/mbr-clients-slider.js') ?>"></script>
+  <script src="<?= base_url('assets/dropdown/js/script.min.js') ?>"></script>
+  <script src="<?= base_url('assets/touchswipe/jquery.touch-swipe.min.js') ?>"></script>
+  <script src="<?= base_url('assets/mbr-popup-btns/mbr-popup-btns.js') ?>"></script>
+  <script src="<?= base_url('assets/mbr-flip-card/mbr-flip-card.js') ?>"></script>
+  <script src="<?= base_url('assets/mbr-tabs/mbr-tabs.js') ?>"></script>
+  <script src="<?= base_url('assets/mbr-testimonials-slider/mbr-testimonials-slider.js') ?>"></script>
+  <script src="<?= base_url('assets/theme/js/script.js') ?>"></script>
+  <script src="<?= base_url('assets/gallery/player.min.js') ?>"></script>
+  <script src="<?= base_url('assets/gallery/script.js') ?>"></script>
+  <script src="<?= base_url('assets/slidervideo/script.js') ?>"></script>
+  <script src="<?= base_url('assets/formoid/formoid.min.js') ?>"></script>
 
   
-})
+  <script>
+    $(document).ready(function(){
+        $('.ba-slider').each(function(){
+            var cur = $(this);
+            // Adjust the slider
+            var width = cur.width()+'px';
+            cur.find('.resize img').css('width', width);
+            // Bind dragging events
+            drags(cur.find('.handle'), cur.find('.resize'), cur);
+        });
+    });
 
-$(document).on("click", ".img-c.active", function() {
-  let copy = $(this)
-  copy.removeClass("positioned active").addClass("postactive")
-  setTimeout(function() {
-    copy.remove();
-  }, 500)
-	  })
+// Update sliders on resize. 
+// Because we all do this: i.imgur.com/YkbaV.gif
+$(window).resize(function(){
+  $('.ba-slider').each(function(){
+    var cur = $(this);
+    var width = cur.width()+'px';
+    cur.find('.resize img').css('width', width);
+  });
+});
 
-	  $('<button/>', {
-	    text: 'Show All',
-	    class: 'btn btn-outline-info active',
-	    click: function() {
-	      $(this)
-	        .addClass('active')
-	        .siblings()
-	        .removeClass('active');
-	      $imgs.show();
-	    }
-	  }).appendTo($buttons);
+function drags(dragElement, resizeElement, container) {
+    
+  // Initialize the dragging event on mousedown.
+  dragElement.on('mousedown touchstart', function(e) {
+    
+    dragElement.addClass('draggable');
+    resizeElement.addClass('resizable');
+    
+    // Check if it's a mouse or touch event and pass along the correct value
+    var startX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+    
+    // Get the initial position
+    var dragWidth = dragElement.outerWidth(),
+        posX = dragElement.offset().left + dragWidth - startX,
+        containerOffset = container.offset().left,
+        containerWidth = container.outerWidth();
+ 
+    // Set limits
+    minLeft = containerOffset + 10;
+    maxLeft = containerOffset + containerWidth - dragWidth - 10;
+    
+    // Calculate the dragging distance on mousemove.
+    dragElement.parents().on("mousemove touchmove", function(e) {
+        
+      // Check if it's a mouse or touch event and pass along the correct value
+      var moveX = (e.pageX) ? e.pageX : e.originalEvent.touches[0].pageX;
+      
+      leftValue = moveX + posX - dragWidth;
+      
+      // Prevent going off limits
+      if ( leftValue < minLeft) {
+        leftValue = minLeft;
+      } else if (leftValue > maxLeft) {
+        leftValue = maxLeft;
+      }
+      
+      // Translate the handle's left value to masked divs width.
+      widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
+            
+      // Set the new values for the slider and the handle. 
+      // Bind mouseup events to stop dragging.
+      $('.draggable').css('left', widthValue).on('mouseup touchend touchcancel', function () {
+        $(this).removeClass('draggable');
+        resizeElement.removeClass('resizable');
+      });
+      $('.resizable').css('width', widthValue);
+    }).on('mouseup touchend touchcancel', function(){
+      dragElement.removeClass('draggable');
+      resizeElement.removeClass('resizable');
+    });
+    e.preventDefault();
+  }).on('mouseup touchend touchcancel', function(e){
+    dragElement.removeClass('draggable');
+    resizeElement.removeClass('resizable');
+  });
+}
 
-	  $.each(tagged, function(tagName) {
-	    var $n = $(tagged[tagName]).length;
-	    $('<button/>', {
-	      text: tagName + '(' + $n + ')',
-	      class: 'btn btn-outline-info',
-	      click: function() {
-	        $(this)
-	          .addClass('active')
-	          .siblings()
-	          .removeClass('active');
-	        $imgs
-	          .hide()
-	          .filter(tagged[tagName])
-	          .show();
-	      }
-	    }).appendTo($buttons);
-	  });
-	}())
 
 
+  </script>
 
-		
-	</script>
-
-  </body>
+  
+  
+</body>
 </html>

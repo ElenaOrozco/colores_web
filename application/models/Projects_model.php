@@ -12,11 +12,27 @@ class Projects_model extends MY_Model {
         
     }
 
-    public function listProjects() {
+    public function listProjects($limit = 0) {
     	$this->db->where("status", "PUBLISHED");
         $this->db->where("deleted_at", NULL);
+        if($limit){
+            $this->db->limit($limit);
+        }
         $this->db->order_by("id", "DESC");
         return $this->db->get('projects');
         
     }
+
+    public function lastProjects($limit = 0) {
+        $this->db->where("status", "PUBLISHED");
+        $this->db->where("deleted_at", NULL);
+        if($limit){
+            $this->db->limit($limit);
+        }
+        $this->db->order_by("id", "DESC");
+        return $this->db->get('projects');
+        
+    }
+
+    
 }

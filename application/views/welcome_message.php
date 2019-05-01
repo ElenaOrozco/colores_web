@@ -1,6 +1,8 @@
 
 		<?php $this->load->view('layouts/header') ?>
-		<?php $this->load->view('sections/carousel') ?>
+		<?php $this->load->view('page/slider') ?>
+
+		<?php //$this->load->view('sections/carousel') ?>
 		<?php //$this->load->view('sections/services') ?>
 		<?php //$this->load->view('sections/about_us') ?>
 		

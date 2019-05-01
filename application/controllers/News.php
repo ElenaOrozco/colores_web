@@ -18,8 +18,10 @@ class News extends MY_Controller {
     }
 
     public function insert_entry(){
+
+        $title = permalink($this->string_sanitize($this->input->post('title')));
         $entry = array(
-                'permalink'   => permalink($this->input->post('title')),
+                'permalink'   => $title,
                 'author'      => $this->session->userdata('nombre'),
                 'title'       => $this->input->post('title'),
                 'abstract'    => $this->input->post('abstract'),
@@ -60,8 +62,9 @@ class News extends MY_Controller {
     }
 
     public function update_entry($id){
+        $title = permalink($this->string_sanitize($this->input->post('title')));
         $entry = array(
-                'permalink'   => permalink($this->input->post('title')),
+                'permalink'   => $title,
                 'author'      => $this->session->userdata('nombre'),
                 'title'       => $this->input->post('title'),
                 'abstract'    => $this->input->post('abstract'),

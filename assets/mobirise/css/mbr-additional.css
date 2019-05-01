@@ -1,12 +1,175 @@
 @import url(https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i);
 
-
-
-
-
 body {
   font-style: normal;
   line-height: 1.5;
+}
+/* Before-After */
+@import "lesshat";
+
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.ba-slider img {
+    width: 100%;
+    display:block;
+}
+ 
+.resize {
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+
+
+.handle { /* Thin line seperator */
+  position:absolute; 
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  margin-left:-2px;
+ 
+  background: rgba(0,0,0,.5);
+  cursor: ew-resize;
+}
+ 
+.handle:after {  /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+ 
+    content:'\21d4';
+    color:white;
+    font-weight:bold;
+    font-size:36px;
+    text-align:center;
+    line-height:64px;
+ 
+    background: #ffb800; /* @orange */
+    border:1px solid #e6a600; /* darken(@orange, 5%) */
+    border-radius: 50%;
+    transition:all 0.3s ease;
+    box-shadow:
+      0 2px 6px rgba(0,0,0,.3), 
+      inset 0 2px 0 rgba(255,255,255,.5),
+      inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/ 
+}
+
+.draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:48px;
+    font-size:30px;
+}
+/* Before -After */
+
+/*News Page */
+.image-new{
+  max-width: 100%!important;
+}
+.title-news{
+  text-transform: uppercase;
+  color: blue;
+}
+
+/*News Page */
+.testimonials2{
+  background: rgba(6, 6, 5, 0.5);
+  
+}
+.testimonials{
+
+  background: rgba(184,176,152,0.3);
+}
+.container-testimonials{
+  
+  background: url(../../../img/black-color-paint-8614.jpg) no-repeat fixed center;
+    background-size: cover;
+}
+
+.border-title{
+  border-top: 5px solid #1cb5a6;
+  width: 150px;
+}
+
+.main{
+  background: rgba(0, 0, 0, 0.61);
+  height: 90vh;
+}
+
+.icons{
+  color: #fff;
+  /*padding: 20px;*/
+  text-align: center;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 7px solid #fff;
+
+}
+
+.box{
+  background: #1CB5A6;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 20px;
+  margin:30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.box p{
+  margin-bottom: .2rem !important;
+}
+
+.font-small{
+  font-size: .9rem;
+  line-height: 1rem !important;
+  font-weight: bold;
+
+}
+
+.icons i{
+  font-size: 5rem;
+  
+}
+.bg-dark-blue{
+  background: #4e4c47 !important;
+}
+.bg-dark{
+  background: #000 !important;
+}
+.bg-gray{
+  background: rgb(184, 176, 152);
+}
+
+.bg-brown{
+  background: #d8a460;
+}
+.bg-orange{
+  background: #d8a460;
+}
+.bg-red{
+  background: #f15a29;
+}
+.bg-yellow{
+  background: #cadb2e;
+}
+.bg-olive{
+  background: #9cae87;
+}
+.bg-green{
+  background: #2c8878;
 }
 .mbr-section-title {
   font-style: normal;
@@ -54,6 +217,13 @@ body {
 .display-7 > .mbr-iconfont {
   font-size: 1.6rem;
 }
+.display-8 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem !important;
+}
+.display-8 > .mbr-iconfont {
+  font-size: 5rem;
+}
 /* ---- Fluid typography for mobile devices ---- */
 /* 1.4 - font scale ratio ( bootstrap == 1.42857 ) */
 /* 100vw - current viewport width */
@@ -81,6 +251,7 @@ body {
     line-height: calc( 1.4 * (1.175rem + (1.5 - 1.175) * ((100vw - 20rem) / (48 - 20))));
   }
 }
+
 /* Buttons */
 .btn {
   font-weight: 500;
@@ -1602,7 +1773,8 @@ body {
 .cid-rmV8gnjXUk .full-screen .slider-fullscreen-image {
   min-height: 100vh;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 0% 0%;
+  /*background-position: 50% 50%;*/
   background-size: cover;
 }
 .cid-rmV8gnjXUk .full-screen .slider-fullscreen-image.active {
@@ -1740,9 +1912,10 @@ body {
   }
 }
 .cid-rmV8Wmm8bo {
-  background-image: url("../../../assets/images/background1.jpg");
+  background-image: url("../../../img/stock-photo-construction-workers-on-scaffolding-tower-painting-and-renovating-building-floor-in-construction-712253938.jpg");
 }
-.cid-rmV8Wmm8bo .icons-media-container {
+.cid-rmV8Wmm8bo .icons-media-container,
+.container-testimonials .icons-media-container {
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
@@ -1752,11 +1925,13 @@ body {
   flex-wrap: wrap;
   padding-top: 4rem;
 }
-.cid-rmV8Wmm8bo .icons-media-container .mbr-iconfont {
+.cid-rmV8Wmm8bo .icons-media-container .mbr-iconfont,
+.container-testimonials  .icons-media-container .mbr-iconfont {
   font-size: 96px;
   color: #ffffff;
 }
-.cid-rmV8Wmm8bo .icons-media-container .icon-block {
+.cid-rmV8Wmm8bo .icons-media-container .icon-block,
+.container-testimonials  .icons-media-container .icon-block {
   padding-bottom: 1rem;
 }
 .cid-rmV8Wmm8bo .mbr-text {
@@ -1766,7 +1941,7 @@ body {
   padding-bottom: 1.5rem;
 }
 .cid-rmV8YeaDCn {
-  background-image: url("../../../assets/images/background4.jpg");
+  background-image: url("../../../assets/images/stock-photo-architectural.jpg");
 }
 .cid-rmV8YeaDCn .form-control,
 .cid-rmV8YeaDCn .form-control:focus {
@@ -2398,7 +2573,7 @@ body {
     -webkit-flex-direction: column;
   }
   .cid-rmV9PEsLDg img {
-    height: 3.8rem !important;
+    height: 3.6rem !important;
   }
   .cid-rmV9PEsLDg .btn {
     display: -webkit-flex;
@@ -2618,9 +2793,10 @@ body {
   background: linear-gradient(to left, #554346, #45505b) !important;
 }
 .cid-rmVaMoaz5U {
+  margin-top: 78px;
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../assets/images/background4.jpg");
+  background-image: url("../../../img/stock-photo-contractor-concept-background-top-view-place-for-typography-578775166.jpg");
 }
 .cid-rmVaMX7KWW {
   padding-top: 60px;
@@ -2628,6 +2804,7 @@ body {
   background-image: url("../../../assets/images/background4.jpg");
 }
 .cid-rmVaRlMztw {
+
   padding-top: 90px;
   padding-bottom: 90px;
   background-color: #efefef;
@@ -2655,13 +2832,21 @@ body {
 }
 .cid-rmVaRlMztw .mbr-text {
   color: #767676;
+
 }
 .cid-rmVaRlMztw .card-wrapper {
-  height: 100%;
+  height: 100% !important;
   padding-bottom: 2rem;
   background: #ffffff;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s;
+}
+.cid-rmVaRlMztw .card-wrapper{
+  height: 1200px !important;
+}
+
+.cid-rmVaRlMztw .card-wrapper .card-img img {
+  max-height: 300px;
 }
 .cid-rmVaRlMztw .card-wrapper:hover {
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
@@ -2945,13 +3130,13 @@ body {
   z-index: 2;
   padding: 0;
   width: 100%;
-  height: 100%;
+  /*height: 100%;*/
   overflow: hidden;
 }
 .cid-rmVaZb1IUJ .card-front img {
   height: 100%;
   min-width: 100%;
-  width: auto;
+  max-width: 100%
 }
 .cid-rmVaZb1IUJ .card_back {
   width: 100%;
@@ -2970,7 +3155,7 @@ body {
   transform: rotateY(-180deg);
 }
 .cid-rmVaZb1IUJ .card {
-  min-height: 300px;
+  min-height: 200px;
 }
 .cid-rmVaZb1IUJ .card:hover .card-front {
   z-index: 1;
@@ -3035,7 +3220,8 @@ body {
 .cid-rmVb6VDOrS {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-image: url("../../../assets/images/background4.jpg");
+  background-image: url("../../../img/stock-photo-exterior-view-of-new-house-under-construction-and-painting-house-painting-in-morning-694025584.jpg");
+  background-position: center top;
 }
 .cid-rmVb6VDOrS .nav-tabs .nav-item.open .nav-link:focus,
 .cid-rmVb6VDOrS .nav-tabs .nav-link.active:focus {
@@ -3202,8 +3388,8 @@ body {
 .cid-rmVbi2lXXJ {
   padding-top: 90px;
   padding-bottom: 90px;
-  background-color: #55b4d4;
-  background: linear-gradient(#55b4d4, #efefef);
+  /*background-color: #55b4d4;
+  background: linear-gradient(#55b4d4, #efefef);*/
 }
 .cid-rmVbi2lXXJ .carousel-control {
   background: #000;
@@ -3233,7 +3419,7 @@ body {
   justify-content: center;
 }
 .cid-rmVbi2lXXJ .carousel-controls .carousel-control {
-  background: #000;
+  background: #092df1;
   border-radius: 50%;
   position: static;
   width: 40px;
